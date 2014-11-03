@@ -8,7 +8,7 @@ Simple text-to-speech API built off Google Translate
 ### How to use ###
 `tts.speak('Hello');`
 
-`tts.speak('Bonjour','fr');
+`tts.speak('Bonjour','fr');`
 
 `tts.speak('Obrigado','pt','com.br');`
 
