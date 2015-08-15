@@ -1,10 +1,7 @@
 tts =
-	speak: (text,tl,domain)->
-		domain = domain or 'com'
-		protocol = protocol or 'http'
-		tl = tl || Session.get('tl') || 'en'
-
-		src = protocol+'://translate.google.'+domain+'/translate_tts?tl='+tl+'&q='+text+''
+	speak: (text)->
+		text = text.replace(/\s+/, '+')
+		src = 'http://tts-api.com/tts.mp3?q=#{text}'
 
 		$('#tts').remove()
 		html = '<iframe id="tts" style="display:none;" src="'+src+'" />'
